@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "angelsend": {
+      "type": "http",
+      "url": "https://invazkujqgdgpkpsingh.supabase.co/functions/v1/mcp-server"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "angelsend",
+  "version": "1.1.0",
+  "description": "Run AngelSend outreach from Claude Code: campaigns, contacts, inbox, CRM and analytics over the AngelSend MCP server, with OAuth sign-in.",
+  "author": {
+    "name": "AW3 Technology",
+    "email": "will.schulz@aw3.tech"
+  },
+  "homepage": "https://angelsend.ai/docs",
+  "keywords": ["email", "outreach", "crm", "campaigns", "mcp"]
+}
