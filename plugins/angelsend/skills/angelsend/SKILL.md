@@ -29,7 +29,7 @@ around it.
 Users can disconnect an app at angelsend.ai → Settings → API & Security → Connected AI apps.
 
 Teams that prefer API keys can skip OAuth: mint a key at angelsend.ai →
-Settings → API, then
+Settings → API & Security, then
 `claude mcp add --transport http angelsend <url> --header "x-api-key: sk_…"`.
 With a key, `write` is enough to launch campaigns. The confirmation rule below
 matters even more then.
