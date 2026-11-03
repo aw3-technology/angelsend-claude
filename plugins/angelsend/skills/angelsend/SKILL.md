@@ -114,6 +114,12 @@ best, and replies only count on sends older than 72h. `pick_ab_test_winner`
 calls a step early, which changes what its unsent emails say, so confirm with
 the user first. `reset_ab_test_winner` undoes a pick.
 
+**Where to focus**: `get_market_intelligence_status`, then
+`classify_contacts_by_niche` until it reports done, then `run_market_analysis`
+for a niche ranking (supply/demand asymmetry and engagement) and a three-pick
+brief. `create_niche_segment` with a pick's `sector` turns it into a segment of
+never-contacted contacts, ready for a campaign.
+
 **How is it going**: `get_campaign_performance`, `get_analytics_summary`,
 `list_campaign_queue` (what's scheduled) and `get_pipeline_health` (sending
 problems).
