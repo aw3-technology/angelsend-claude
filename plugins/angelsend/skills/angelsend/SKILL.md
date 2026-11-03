@@ -111,6 +111,9 @@ problems).
 ## When something fails
 
 - 401 or "Invalid or expired credentials": re-authenticate from `/mcp`.
+- 503 "Temporarily unable to verify credentials": a brief AngelSend outage,
+  not a sign-in problem. The credential is still good, so don't
+  re-authenticate. Wait about 30 seconds and retry once.
 - `{ "error": … }` in a result is the server's real answer. Report it plainly;
   don't retry the same call in a loop.
 - Persistent server errors: `create_support_ticket` with what was attempted,

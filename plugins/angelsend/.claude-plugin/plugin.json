@@ -1,6 +1,6 @@
 {
   "name": "angelsend",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Run AngelSend outreach from Claude Code: campaigns, contacts, inbox, CRM and analytics over the AngelSend MCP server, with OAuth sign-in.",
   "author": {
     "name": "AW3 Technology",
