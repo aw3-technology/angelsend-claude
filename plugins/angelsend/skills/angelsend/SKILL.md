@@ -101,6 +101,19 @@ before a large send, because bounces suspend the sending mailbox.
 **Work the inbox**: `list_inbox_messages`, `get_message_thread`, draft a reply
 for the user, and `reply_to_message` only after they approve the text.
 
+**A/B test a campaign**: each email step can carry up to five versions, A–E
+(A is the step's own `subject`/`body`, B is `subject_b`/`body_b`, C–E are
+`extra_variants`). Write them with `update_campaign_step` or `update_campaign`,
+then turn testing on with `update_campaign` (`ab_test_enabled`, plus
+`ab_winner_metric` and `ab_winner_min_sends`). On a running campaign that also
+spreads the already-queued emails across the versions; `split_ab_test_queue`
+re-runs it. Read results with `get_ab_test_results` and report the "chance
+best" probability, not just the rates: a step is decided automatically only
+when every version has the minimum counted sends and one is 95% likely to be
+best, and replies only count on sends older than 72h. `pick_ab_test_winner`
+calls a step early, which changes what its unsent emails say, so confirm with
+the user first. `reset_ab_test_winner` undoes a pick.
+
 **How is it going**: `get_campaign_performance`, `get_analytics_summary`,
 `list_campaign_queue` (what's scheduled) and `get_pipeline_health` (sending
 problems).
