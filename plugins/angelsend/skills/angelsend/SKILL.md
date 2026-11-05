@@ -120,6 +120,14 @@ for a niche ranking (supply/demand asymmetry and engagement) and a three-pick
 brief. `create_niche_segment` with a pick's `sector` turns it into a segment of
 never-contacted contacts, ready for a campaign.
 
+**Is my sending domain set up**: `list_verified_domains` shows each domain's
+status and which email provider it sends through (`esp_provider`/`esp_account`:
+Resend on AngelSend's account by default, Resend on the user's own account, or
+SendGrid). `verify_domain` re-checks its DNS and returns the records still
+missing. `set_domain_provider` switches the provider, after which the new
+provider's records must be added before mail is signed, so only switch when
+asked. Adding a domain and connecting a Resend key happen in the app.
+
 **How is it going**: `get_campaign_performance`, `get_analytics_summary`,
 `list_campaign_queue` (what's scheduled) and `get_pipeline_health` (sending
 problems).
